@@ -4,6 +4,30 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
+.i{
+	display: inline-block;
+	vertical-align: middle;
+	background-size: 100% 100%;
+}
+.i_arrow{
+	background-image: url("../i/interface/arrow.png");
+	width: 14px;
+	height: 14px;
+}
+.i_ellipse{
+	background-image: url("../i/interface/ellipse.png");
+	background-size: 34%;
+  	background-repeat: no-repeat;
+  	width: 13px;
+  	height: 24px;
+  	margin-left: 20px;
+}
+.i_eq{
+	background-image: url("../i/interface/eq-icon.png");
+	width: 23px;
+	height: 21px;
+	margin-right: 20px;
+}
 .state{
 	max-width: 360px;
 	max-height: 640px;
@@ -14,4 +38,34 @@ html,body{
 	background-size: 100% auto;
 	background-position: center top;
 	background-repeat: no-repeat;
+}
+.track{
+	text-align: center;
+	margin-top: 25px;
+}
+.panel_top{
+	font-size: 0;
+	text-align: center;
+}
+.panel-side{
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	margin-top: 15px;
+}
+.panel-side_left{
+	text-align: left;
+}
+.panel-side_right{
+	text-align: right;
+	display: inline-block;
+}
+.panel-side-title{
+	font-size: 20px;
+	font-family: Roboto;
+	color: rgba(255, 255, 255, 0.8);
+}
+.panel-side-tittle-text{
+	vertical-align: middle;
+	margin-left: 10px;
 }
