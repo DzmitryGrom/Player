@@ -69,3 +69,34 @@ html,body{
 	vertical-align: middle;
 	margin-left: 10px;
 }
+.track-bar{
+	font-size: 0;
+	margin-right: 36px;
+	margin-left: 36px;
+	text-align: left;
+}
+.track-bar-object{
+	background-color: #ff5252;
+	height: 10px;
+	display: inline-block;
+}
+.track-bar-value-caption{
+	font-size: 20px;
+	text-align: right;
+}
+.track-bar-value{
+	color: rgba(254, 95, 89, 0.9);
+	display: inline-block;
+}
+.track-albom{
+	color:  rgba(235, 235, 250, 0.9);
+	font-family: Roboto;
+	font-size: 33px;
+	margin: 0px;
+}
+.track-caption{
+	font-family: Roboto;
+	color:  #ff5252;
+	font-size: 16px;
+	margin: 0px;
+}
