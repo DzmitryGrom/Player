@@ -4,6 +4,15 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
+.d{
+	width: 360px;
+	height: 640px;
+	position: absolute;
+	background-image: url(../i/pp.jpg);
+	margin-left: 114px;
+	opacity: 0.2;
+	display: none;
+}
 .i{
 	display: inline-block;
 	vertical-align: middle;
@@ -14,19 +23,94 @@ html,body{
 	width: 14px;
 	height: 14px;
 }
-.i_ellipse{
+.i_settings{
 	background-image: url("../i/interface/ellipse.png");
 	background-size: 34%;
   	background-repeat: no-repeat;
   	width: 13px;
   	height: 24px;
-  	margin-left: 20px;
 }
-.i_eq{
+.i_equalizer{
 	background-image: url("../i/interface/eq-icon.png");
 	width: 23px;
 	height: 21px;
-	margin-right: 20px;
+}
+.caption-btn{
+	text-align: center;
+	margin-top: 14px;
+}
+.btn-object{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 0 10px;
+}
+.btn-shifle{
+	background-image: url("../i/interface/shiffle.png");
+	background-repeat: no-repeat;
+	width: 46px;
+	height: 40px;
+	display: inline-block;
+	background-size: 60%;
+}
+.btn-last{
+	background-image: url("../i/interface/arrow-left.png");
+	background-repeat: no-repeat;
+	width: 28px;
+	height: 32px;
+	margin-right: 11px;
+	display: inline-block;
+	background-size: 100%;
+}
+.btn-play{
+	background-image: url("../i/interface/play.png");
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 76px;
+	margin-top: 20px;
+	display: inline-block;
+	background-size: 60%;
+}
+.btn-next{
+	background-image: url("../i/interface/arrow-right.png");
+	background-repeat: no-repeat;
+	width: 28px;
+	margin-right: 11px;
+	height: 32px;
+	display: inline-block;
+	background-size: 100%;
+}
+.btn-repet{
+	background-image: url("../i/interface/repet.png");
+	background-repeat: no-repeat;
+	width: 46px;
+	height: 32px;
+	display: inline-block;
+	background-size: 60%;
+}
+.bottom-btn{
+	text-align: center;
+	background-image: url("../i/interface/bottom-cover.png");
+	background-repeat: no-repeat;
+	margin: 0 ;
+}
+.bottom-btn-left{
+	background-image: url("../i/interface/burg-left.png");
+	background-repeat: no-repeat;
+	background-size: 60%;
+	width: 42px;
+	height: 6px;
+}
+.bottom-btn-right{
+	background-image: url("../i/interface/burg-right.png");
+	background-repeat: no-repeat;
+	background-size: 60%;
+	width: 42px;
+	height: 6px;
+}
+.bottom-btn-text{
+	font-family: Roboto;
+	color:  rgba(255, 255, 255, 0.9);
+	font-weight: 400;
 }
 .state{
 	max-width: 360px;
@@ -39,10 +123,6 @@ html,body{
 	background-position: center top;
 	background-repeat: no-repeat;
 }
-.track{
-	text-align: center;
-	margin-top: 25px;
-}
 .panel_top{
 	font-size: 0;
 	text-align: center;
@@ -51,7 +131,7 @@ html,body{
 	display: inline-block;
 	vertical-align: top;
 	width: 45%;
-	margin-top: 15px;
+	margin-top: 17px;
 }
 .panel-side_left{
 	text-align: left;
@@ -67,12 +147,27 @@ html,body{
 }
 .panel-side-tittle-text{
 	vertical-align: middle;
+	font-weight: 400;
 	margin-left: 10px;
+}
+.panel-side-equalizer{
+	margin-right: 51px;
+}
+.panel-side-settings{
+	margin-right: -4px;
+}
+.track{
+	text-align: center;
+	margin-top: 46px;
+}
+.track-cover{
+	display: block;
+	margin: 0 auto;
 }
 .track-bar{
 	font-size: 0;
-	margin-right: 36px;
-	margin-left: 36px;
+	margin-right: 46px;
+	margin-left: 46px;
 	text-align: left;
 }
 .track-bar-object{
@@ -83,20 +178,26 @@ html,body{
 .track-bar-value-caption{
 	font-size: 20px;
 	text-align: right;
+	margin-top: 4px;
 }
 .track-bar-value{
 	color: rgba(254, 95, 89, 0.9);
 	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
 }
 .track-albom{
 	color:  rgba(235, 235, 250, 0.9);
+	font-weight: 300;
 	font-family: Roboto;
 	font-size: 33px;
-	margin: 0px;
+	margin: 24px 0 0 0;
 }
 .track-caption{
 	font-family: Roboto;
 	color:  #ff5252;
 	font-size: 16px;
 	margin: 0px;
+	margin-top: 7px;
+	font-weight: 300;
 }
