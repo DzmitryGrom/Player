@@ -84,6 +84,12 @@ html,body{
 .panel_top{
 	font-size: 0;
 	text-align: center;
+	padding-bottom: 17px;
+}
+.panel_bg{
+	background-image: url("../i/interface/top-panel.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 .panel-side{
 	display: inline-block;
@@ -114,9 +120,11 @@ html,body{
 .panel-side-settings{
 	margin-right: -4px;
 }
+.playlist-item{
+}
 .track{
 	text-align: center;
-	margin-top: 46px;
+	margin-top: 36px;
 }
 .track-cover{
 	display: block;
@@ -159,3 +167,15 @@ html,body{
 	margin-top: 7px;
 	font-weight: 300;
 }
+.panel_playlist{
+	text-align: center;
+}
+.top-panel-text{
+	font-family: Roboto;
+	color:  rgba(255, 255, 255, 0.9);
+	font-size: 20px; 
+	font-weight: 400;
+	margin: 0px auto;
+	padding-top: 19px;
+}
+
