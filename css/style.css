@@ -30,6 +30,19 @@ html,body{
   	width: 13px;
   	height: 24px;
 }
+.i_scale{
+	background-image: url("../i/interface/scale.png");
+	background-repeat: no-repeat;
+	width: 19px;
+	height: 22px;
+	margin-right: 12px;
+}
+.i_setting-red{
+	background-image: url("../i/interface/ellipse-litle.png");
+	background-repeat: no-repeat;
+	width: 2px;
+	height: 15px;
+}
 .i_equalizer{
 	background-image: url("../i/interface/equalizer.png");
 	width: 23px;
@@ -59,6 +72,9 @@ html,body{
 	background-image: url("../i/interface/repeat.png");
 	width: 23px;
 	height: 18px;
+}
+.i_setting-red_wrap{
+	margin-left: 12px;
 }
 .controller{
 	text-align: center;
@@ -121,6 +137,43 @@ html,body{
 	margin-right: -4px;
 }
 .playlist-item{
+	border: 1px solid rgba(29, 39, 44, 0.5);
+	  padding-bottom: 11px;
+}
+.pl-side_left{
+	margin-left: 20px;
+  	width: 76%;
+  	display: inline-block;
+}
+.pl-side_right{
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	margin-top: 24px;
+}
+.pl-text_top{
+	font-family: Roboto;
+	color:  rgba(216, 217, 233, 0.9);
+	font-weight: 500;
+	font-size: 20px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 20px
+}
+.pl-time-side_right{
+	font-family: Roboto;
+	color:  rgba(255, 255, 255, 0.9);
+	font-weight: 500;
+	font-size: 16px;	
+}
+.pl-text_botton{
+	font-family: Roboto;
+	color:  rgba(235, 235, 250, 0.8);
+	font-weight: 300;
+	font-size: 13px;
+	margin: 0px;
+	margin-top: 4px;
+	padding: 0px;
 }
 .track{
 	text-align: center;
