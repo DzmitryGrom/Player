@@ -8,10 +8,12 @@ html,body{
 	width: 360px;
 	height: 640px;
 	position: absolute;
-	background-image: url(../i/pp.jpg);
-	margin-left: 114px;
+	background-image: url(../i/pp2.jpg);
+	margin-left: -180px;
 	opacity: 0.2;
 	display: none;
+	left: 50%;
+	z-index: 1;
 }
 .i{
 	display: inline-block;
@@ -35,7 +37,6 @@ html,body{
 	background-repeat: no-repeat;
 	width: 19px;
 	height: 22px;
-	margin-right: 12px;
 }
 .i_setting-red{
 	background-image: url("../i/interface/ellipse-litle.png");
@@ -73,9 +74,6 @@ html,body{
 	width: 23px;
 	height: 18px;
 }
-.i_setting-red_wrap{
-	margin-left: 12px;
-}
 .controller{
 	text-align: center;
 	margin-top: 35px;
@@ -91,6 +89,7 @@ html,body{
 	max-height: 640px;
 	margin: 0 auto;
 	width: 100%;
+	position: relative;
 	min-height: 640px;
 	background-image: url("../i/background.jpg");
 	background-size: 100% auto;
@@ -136,20 +135,39 @@ html,body{
 .panel-side-settings{
 	margin-right: -4px;
 }
+.playlist{
+	position: absolute;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	top: 60px;
+  	overflow: hidden;
+}
 .playlist-item{
 	border: 1px solid rgba(29, 39, 44, 0.5);
-	  padding-bottom: 11px;
+	font-size: 0px;
+	padding: 3% 5% 6% 5%;
 }
+.playlist-scroll{
+	position: absolute;
+	top: 127px;
+	right: 2px;
+	border-radius: 500px;
+	height: 64px;
+	width: 5px;
+	background-color: #ff5252;
+}
+
 .pl-side_left{
-	margin-left: 20px;
-  	width: 76%;
+  	width: 81%;
   	display: inline-block;
+  	vertical-align: middle;
 }
 .pl-side_right{
 	display: inline-block;
 	text-align: right;
+	width: 19%;
 	vertical-align: top;
-	margin-top: 24px;
 }
 .pl-text_top{
 	font-family: Roboto;
@@ -158,21 +176,25 @@ html,body{
 	font-size: 20px;
 	margin: 0 auto;
 	padding: 0px;
-	margin-top: 20px
 }
-.pl-time-side_right{
+.pl-item-time{
 	font-family: Roboto;
 	color:  rgba(255, 255, 255, 0.9);
 	font-weight: 500;
-	font-size: 16px;	
+	vertical-align: bottom;
+	display: inline-block;
+	margin-right: 15px;
+	font-size: 16px;
+}
+.pl-time-side_right{
+		
 }
 .pl-text_botton{
 	font-family: Roboto;
 	color:  rgba(235, 235, 250, 0.8);
 	font-weight: 300;
-	font-size: 13px;
+	font-size: 14px;
 	margin: 0px;
-	margin-top: 4px;
 	padding: 0px;
 }
 .track{
