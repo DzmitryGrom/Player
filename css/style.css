@@ -4,11 +4,14 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
+.active_panel-top{
+	border-top: 3px solid #f66762;;
+}
 .d{
 	width: 360px;
 	height: 640px;
 	position: absolute;
-	background-image: url(../i/pp2.jpg);
+	background-image: url(../i/pp.jpg);
 	margin-left: -180px;
 	opacity: 0.2;
 	display: none;
@@ -27,9 +30,8 @@ html,body{
 }
 .i_settings{
 	background-image: url("../i/interface/ellipse.png");
-	background-size: 34%;
   	background-repeat: no-repeat;
-  	width: 13px;
+  	width: 4px;
   	height: 24px;
 }
 .i_scale{
@@ -74,6 +76,18 @@ html,body{
 	width: 23px;
 	height: 18px;
 }
+.i_reload{
+	background-image: url("../i/interface/reload.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 21px;
+	height: 18px;
+}
+.i_reload-wrapper{
+	display: inline-block;
+	width: 15%;
+	text-align: right;
+}
 .controller{
 	text-align: center;
 	margin-top: 35px;
@@ -101,8 +115,29 @@ html,body{
 	text-align: center;
 	padding-bottom: 17px;
 }
+.panel-top_nav{
+	font-size: 0;
+}
+.panel-top_nav-list{
+	
+}
+.panel-top_list{
+	text-decoration: none;
+	padding: 10px 0 25px 0;
+	display: inline-block;
+	width: 30%;
+
+}
+.panel-top_list-text{
+	font-family: Roboto;
+	color:  #ebebfa;
+	font-weight: 400;
+	font-size: 17px;
+	padding-left: 20%;
+}
 .panel_bg{
-	background-image: url("../i/interface/top-panel.png");
+	background-color:  rgba(29, 39, 44, 0.8);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
@@ -133,26 +168,71 @@ html,body{
 	margin-right: 51px;
 }
 .panel-side-settings{
-	margin-right: -4px;
+	margin-right: 2px;
+}
+.panel-side-settings_nav{
+	display: inline-block;
+  	width: 10%;
+  	text-align: center;
+}
+.panel_nav-list-left{
+
+}
+.search-wrapper{
+	display: inline-block;
+}
+#search{
+	width: 80%;
+	height: 44px;
+	border-radius: 500px;
+	background-color: grey;
+	border: none;
+	display: inline-block;
+}
+.submit-serach{
+	background-image: url("../i/interface/search.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color:  transparent;
+	border: none;
+	padding-bottom: 5px;
+	margin-left: 10px;
+	width: 20px;
+	height: 21px;
+}
+#search .input{
+	height: 43px;
+	border: none;
+	border-radius: 500px;
+	width: 86%;
+	background-color: transparent;
+}
+.panel-top_bottom{
+	padding-left: 6%;
 }
 .playlist{
 	position: absolute;
   	left: 0;
   	right: 0;
   	bottom: 0;
-  	top: 60px;
+  	top: 120px;
   	overflow: hidden;
 }
 .playlist-item{
 	border: 1px solid rgba(29, 39, 44, 0.5);
 	font-size: 0px;
-	padding: 3% 5% 6% 5%;
+	padding: 10px 5% 19px 6%;
+}
+.playlist-item .pl-side_right .i_scale{
+	position: relative;
+	top: 6px;
+	right: 17px;
 }
 .playlist-scroll{
 	position: absolute;
 	top: 127px;
 	right: 2px;
-	border-radius: 500px;
+ 	border-radius:500px;
 	height: 64px;
 	width: 5px;
 	background-color: #ff5252;
@@ -172,10 +252,11 @@ html,body{
 .pl-text_top{
 	font-family: Roboto;
 	color:  rgba(216, 217, 233, 0.9);
-	font-weight: 500;
-	font-size: 20px;
-	margin: 0 auto;
-	padding: 0px;
+	font-weight: 300;
+  	font-size: 20px;
+  	margin: 0 auto 11px auto;
+  	padding: 0px;
+  	line-height: 1;
 }
 .pl-item-time{
 	font-family: Roboto;
@@ -192,14 +273,16 @@ html,body{
 .pl-text_botton{
 	font-family: Roboto;
 	color:  rgba(235, 235, 250, 0.8);
-	font-weight: 300;
-	font-size: 14px;
-	margin: 0px;
-	padding: 0px;
+	font-weight: 400;
+  	font-size: 13.3px;
+  	margin: 0px;
+  	padding: 0px;
+  	white-space: nowrap;
+  	line-height: 1;
 }
 .track{
 	text-align: center;
-	margin-top: 36px;
+	margin-top: 32px;
 }
 .track-cover{
 	display: block;
@@ -207,32 +290,32 @@ html,body{
 }
 .track-bar{
 	font-size: 0;
-	margin-right: 46px;
-	margin-left: 46px;
-	text-align: left;
+	width: 75%;
+  	margin: 0 auto;
 }
-.track-bar-object{
+.track-bar-line{
 	background-color: #ff5252;
 	height: 10px;
-	display: inline-block;
-}
-.track-bar-value-caption{
-	font-size: 20px;
-	text-align: right;
-	margin-top: 4px;
+	display: block;
+	position: relative;
 }
 .track-bar-value{
 	color: rgba(254, 95, 89, 0.9);
-	display: inline-block;
+	position: absolute;
 	font-size: 16px;
 	font-weight: 500;
+	font-family: Roboto;
+	right: 0;
+	margin-top: 4px;
+	top: 100%;
+
 }
 .track-albom{
 	color:  rgba(235, 235, 250, 0.9);
 	font-weight: 300;
 	font-family: Roboto;
 	font-size: 33px;
-	margin: 24px 0 0 0;
+	margin: 47px 0 0 0;
 }
 .track-caption{
 	font-family: Roboto;
