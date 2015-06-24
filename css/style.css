@@ -4,7 +4,7 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
-.active_panel-top{
+.panel-top-nav-link_active{
 	border-top: 3px solid #f66762;;
 }
 .d{
@@ -118,10 +118,10 @@ html,body{
 .panel-top_nav{
 	font-size: 0;
 }
-.panel-top_nav-list{
+.panel-top_nav{
 	
 }
-.panel-top_list{
+.panel-top-nav-link{
 	text-decoration: none;
 	padding: 10px 0 25px 0;
 	display: inline-block;
