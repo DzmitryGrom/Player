@@ -51,6 +51,13 @@ html,body{
 	width: 2px;
 	height: 15px;
 }
+.i_setting-red{
+	vertical-align: middle;
+	background-image: url("../i/interface/ellipse-litle.png");
+	background-repeat: no-repeat;
+	width: 2px;
+	height: 15px;
+}
 .i_equalizer{
 	background-image: url("../i/interface/equalizer.png");
 	width: 23px;
@@ -88,6 +95,12 @@ html,body{
 	width: 32px;
 	height: 25px;
 }
+.i_play-bottom{
+	background-image: url("../i/interface/play-bottom.png");
+	width: 24px;
+	height: 27px;
+	background-size: 100%;
+}
 .controller{
 	text-align: center;
 	margin-top: 35px;
@@ -97,7 +110,7 @@ html,body{
 .controller-btn{
 	display: inline-block;
 	width: 20%;
-}
+}	
 .state{
 	max-width: 360px;
 	max-height: 640px;
@@ -219,13 +232,18 @@ html,body{
   	left: 0;
   	right: 0;
   	bottom: 0;
-  	top: 120px;
+  	top: 130px;
   	overflow: hidden;
 }
 .playlist-item{
 	border: 1px solid rgba(29, 39, 44, 0.5);
 	font-size: 0px;
 	padding: 10px 5% 19px 6%;
+}
+.playlist-item_top-panel{
+	border: 1px solid rgba(29, 39, 44, 0.5);
+	font-size: 0px;
+	padding: 13px 5% 13px 6%;
 }
 .playlist-item .pl-side_right .i_scale{
 	position: relative;
@@ -241,7 +259,15 @@ html,body{
 	width: 5px;
 	background-color: #ff5252;
 }
-
+.playlist-scroll-top-panel{
+	position: absolute;
+	top: 7px;
+	right: 2px;
+ 	border-radius:500px;
+	height: 64px;
+	width: 5px;
+	background-color: #ff5252;
+}
 .pl-side_left{
   	width: 81%;
   	display: inline-block;
@@ -253,6 +279,12 @@ html,body{
 	width: 19%;
 	vertical-align: top;
 }
+.pl-side_right-top-panel{
+	vertical-align: middle;
+	display: inline-block;
+	text-align: right;
+	width: 17%;
+}
 .pl-text_top{
 	font-family: Roboto;
 	color:  rgba(216, 217, 233, 0.9);
@@ -261,6 +293,30 @@ html,body{
   	margin: 0 auto 11px auto;
   	padding: 0px;
   	line-height: 1;
+}
+.pl-text-panel-top{
+	font-family: Roboto;
+	vertical-align: top;
+	color:  #ebebf8;
+	font-size: 17px;
+	margin: 0;
+	padding-top: 8px;
+	padding-left: 7px; 
+	font-weight: 400;
+	text-shadow: 2px 4px 5px rgba(49, 49, 64, 0.75);
+}
+.pl-top-panel-text{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 6%;
+}
+.pl-text-panel-botton{
+	font-family: Roboto;
+	margin: 0;
+	color:  rgba(23, 172, 195, 0.8);
+	font-size: 13.3px; 
+	font-weight: 300;
+	padding-left: 4px;
 }
 .pl-item-time{
 	font-family: Roboto;
@@ -279,10 +335,59 @@ html,body{
 	color:  rgba(235, 235, 250, 0.8);
 	font-weight: 400;
   	font-size: 13.3px;
+  	display: inline-block;
   	margin: 0px;
   	padding: 0px;
   	white-space: nowrap;
   	line-height: 1;
+}
+.pl-side-left-page-avenged{
+	background-image: url("../i/avenged.png");
+	box-shadow: 7px 13px 15px 0px rgba(0, 0, 0, 0.75);
+	width: 62px;
+	display: inline-block;
+	background-size: 100%;
+	height: 49px;
+}
+.pl-side-left-page-bad{
+	background-image: url("../i/bad.png");
+	box-shadow: 7px 13px 15px 0px rgba(0, 0, 0, 0.75);
+	width: 62px;
+	display: inline-block;
+	background-size: 100%;
+	height: 49px;
+}
+.pl-side-left-page-black{
+	background-image: url("../i/black.png");
+	box-shadow: 7px 13px 15px 0px rgba(0, 0, 0, 0.75);
+	width: 62px;
+	display: inline-block;
+	background-size: 100%;
+	height: 49px;
+}
+.pl-side-left-page-bodyslam{
+	background-image: url("../i/bodyslam.png");
+	box-shadow: 7px 13px 15px 0px rgba(0, 0, 0, 0.75);
+	width: 62px;
+	display: inline-block;
+	background-size: 100%;
+	height: 49px;
+}
+.pl-side-left-page-breaking{
+	background-image: url("../i/breaking.png");
+	box-shadow: 7px 13px 15px 0px rgba(0, 0, 0, 0.75);
+	width: 62px;
+	display: inline-block;
+	background-size: 100%;
+	height: 49px;
+}
+.pl-side-left-page-cocktail{
+	background-image: url("../i/cocktail.png");
+	box-shadow: 7px 13px 15px 0px rgba(0, 0, 0, 0.75);
+	width: 62px;
+	display: inline-block;
+	background-size: 100%;
+	height: 49px;
 }
 .track{
 	text-align: center;
@@ -340,4 +445,64 @@ html,body{
 	margin: 0px auto;
 	padding-top: 19px;
 }
+.t-p-text{
+	padding-top: 8px;
+	padding-left: 7px;
+}
+.bottom-panel{
+	background-color:  rgba(29, 39, 44, 0.8);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bottom-panel_side-left-page{
+	background-image: url("../i/gerl.png");
+	width: 82px;
+	display: inline-block;
+	vertical-align: bottom;
+	height: 82px;
+	background-size: 100%;
+}
+.bottom-panel_top-panel{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color:  rgba(29, 39, 44, 0.8);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bottom-panel_side-left-text{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 6%;
+	padding-left: 20px;
 
+}
+.bottom-panel_side-left{
+	display: inline-block;
+	width: 84%;
+}
+.bottom-panel-text-top{
+	font-family: Roboto;
+	color:  rgba(0, 178, 205, 0.9);
+	font-size: 13px;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+.bottom-panel-text-bottom{
+	font-family: Roboto;
+	color:  #ffffff;
+	font-size: 20px;
+	display: inline-block;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+.bottom-panel_side-right{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 8%;
+}
