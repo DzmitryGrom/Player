@@ -151,12 +151,10 @@ html,body{
 	width: 20%;
 }	
 .state{
-	max-width: 360px;
-	max-height: 640px;
 	margin: 0 auto;
 	width: 100%;
+	height: 100%;
 	position: relative;
-	min-height: 640px;
 	background-image: url("../i/background.jpg");
 	background-size: 100% auto;
 	background-position: center top;
