@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,100,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	</head>
 	<body>
 		<i class="d"></i>
@@ -19,7 +19,7 @@
 					<a class="panel-side-equalizer" href="#">
 						<i class="i i_equalizer"></i>
 					</a>
-					<a class="panel-side-settings" href="#">
+					<a  class="panel-side-settings" href="#">
 						<i class="i i_settings"></i>
 					</a>
 				</div>
@@ -54,7 +54,7 @@
 				</a>
 			</div>			
 		</div>
-		<div id="Playlist" style="display:" class="state state-playlist">
+		<div  style="display:" class="state state-playlist">
 			<div class="panel panel_top panel_bg">
 				<span class="top-panel-text">Playlist</span>
 			</div>
@@ -192,13 +192,13 @@
 				</div>
 			</div>
 		</div>
-		<div style="" class="state">
+		<div  class="state state-artist">
 			<div class="panel panel-top panel-top_nav">
 				<div class="panel-top-nav">
 					<a  class="panel-top-nav-link panel-top-nav-link_active" href="#">Artists</a>		
 					<a class="panel-top-nav-link" href="#">Albums</a>			
 					<a class="panel-top-nav-link" href="#">Songs</a>
-					<a class="panel-side-settings_nav" href="#">
+					<a  class="panel-side-settings_nav" href="#">
 						<i class="i i_settings"></i>
 					</a>
 				</div>
@@ -704,16 +704,14 @@
 			</div>
 		</div>
 		<script>
-			$("#playlist").click(function() {
-  				$(this).toggleClass('state-playlist-active');
+			$(".state-playlist").click(function() {
+  				$(this).toggleClass("state-playlist-active");
 			});
 		</script>
 		<script>
-			$("p").hover(function () {
-      			$(this).addClass("hilite");
-    				}, function () {
-     				 $(this).removeClass("hilite");
-    		});
+			$(".panel-side-settings_nav, .panel-side-settings").click(function() {
+  				$(".state-artist").toggleClass("state-artist-active");
+			});
 		</script>
 	</body>
 </html>	

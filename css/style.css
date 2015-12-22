@@ -171,6 +171,13 @@ body{
 	transform: translateY(9%);
 	transition: transform .6s;
 }
+.state-artist{
+	transform: translateY(-100%);
+}
+.state-artist-active{
+	transform: translateY(0%);
+	transition: transform .6s;
+}
 .panel_top{
 	font-size: 0;
 	text-align: center;
@@ -226,7 +233,8 @@ body{
 	margin-left: 10px;
 }
 .panel-side-equalizer{
-	margin-right: 51px;
+	margin-right: 45px;
+	display: inline-block;
 }
 .panel-equalizer-list{
 	text-align: center;
@@ -365,7 +373,7 @@ body{
 .panel-side-settings{
 	margin-right: 2px;
 	display: inline-block;
-	padding: 0px 5px 0px 5px;
+	padding: 0px 10px 0px 10px;
 }
 .panel-side-settings_nav{
 	display: inline-block;
