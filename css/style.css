@@ -4,6 +4,12 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
+body{
+	overflow: hidden;
+}
+*{
+	transition: all .4s;
+}
 .panel-top-nav-link_active{
 	border-top: 9px solid #f66762;;
 }
@@ -136,9 +142,10 @@ html,body{
 }
 .controller{
 	text-align: center;
-	margin-top: 35px;
+	bottom: 90px;
 	font-size: 0;
-	padding: 0 5%;
+	width: 100%;
+	position: absolute;
 }
 .controller-btn{
 	display: inline-block;
@@ -148,11 +155,21 @@ html,body{
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-	position: relative;
+	position: absolute;
 	background-image: url("../i/background.jpg");
 	background-size: 100% auto;
 	background-position: center top;
 	background-repeat: no-repeat;
+}
+.state-playlist{
+	margin-top: -60px;
+	transform: translateY(100%);
+	position: absolute;
+}
+.state-playlist-active{
+	position: absolute;
+	transform: translateY(9%);
+	transition: transform .6s;
 }
 .panel_top{
 	font-size: 0;
@@ -774,7 +791,7 @@ html,body{
 }
 .track-bar{
 	font-size: 0;
-	width: 75%;
+	width: 70%;
   	margin: 0 auto;
 }
 .track-bar-line{
@@ -819,6 +836,8 @@ html,body{
 	font-weight: 400;
 	margin: 0px auto;
 	padding-top: 19px;
+	display: block;
+	padding-top: 18px;
 }
 .t-p-text{
 	padding-top: 8px;
@@ -907,4 +926,9 @@ html,body{
 	font-size: 16px;
 	font-weight: 300;
 	float: left;
+}
+@media only screen and (min-width: 360px){
+	.track-cover{
+		height: 250px;
+	}
 }
