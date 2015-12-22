@@ -168,8 +168,8 @@ body{
 }
 .state-playlist-active{
 	position: absolute;
-	(transform: translateY(0%);
-		margin-top: 0px;)
+	transform: translateY(0%);
+	margin-top: 0px;
 	transition: transform .6s;
 }
 .state-artist{
