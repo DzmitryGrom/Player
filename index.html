@@ -192,12 +192,12 @@
 				</div>
 			</div>
 		</div>
-		<div  class="state state-artist">
+		<div  class="state state-creation">
 			<div class="panel panel-top panel-top_nav">
 				<div class="panel-top-nav">
-					<a  class="panel-top-nav-link panel-top-nav-link_active" href="#">Artists</a>		
-					<a class="panel-top-nav-link" href="#">Albums</a>			
-					<a class="panel-top-nav-link" href="#">Songs</a>
+					<a id="artists" class="panel-top-nav-link panel-top-nav-link_active" href="#">Artists</a>		
+					<a id="albums" class="panel-top-nav-link" href="#">Albums</a>			
+					<a id="song" class="panel-top-nav-link" href="#">Songs</a>
 					<a  class="panel-side-settings" href="#">
 						<i class="i i_settings"></i>
 					</a>
@@ -210,7 +210,7 @@
 					</form>		
 				</div>
 			</div>
-			<div class="playlist_panel-top">
+			<div class="playlist_panel-top_item playlist_panel-top_artists">
 				<div class="playlist-scroll-top-panel"></div>
 				<div class="playlist-item_top-panel playlist-item_top-panel_artist">
 					<div class="pl-side_left">
@@ -297,26 +297,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div style="display:none" class="state">
-			<div class="panel panel-top panel-top_nav">
-				<div class="panel-top-nav">
-					<a  class="panel-top-nav-link" href="#">Artists</a>		
-					<a class="panel-top-nav-link panel-top-nav-link_active" href="#">Albums</a>			
-					<a class="panel-top-nav-link" href="#">Songs</a>
-					<a class="panel-side-settings_nav" href="#">
-						<i class="i i_settings"></i>
-					</a>
-				</div>
-				<div class=" panel-top_bottom">
-					<form class="panel-top-search">
-  						<button class="panel-top-search-submit" type="submit"><i class="i i_search"></i></button>
-  						<span class="panel-top-search-field"><input class="panel-top-search-input" type="text"></span>
-  						<button class="panel-top-search-reload"><i class="i i_reload"></i></button>
-					</form>			
-				</div>
-			</div>
-			<div class="playlist_panel-top">
+			<div  class="playlist_panel-top_item playlist_panel-top_albums">
 				<div class="playlist-scroll-top-panel"></div>
 				<div class="playlist-item_top-panel">
 					<div class="playlist-item_albums-elements">
@@ -360,26 +341,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div style="display:none" class="state">
-			<div class="panel panel-top panel-top_nav">
-				<div class="panel-top-nav">
-					<a  class="panel-top-nav-link" href="#">Artists</a>		
-					<a class="panel-top-nav-link" href="#">Albums</a>			
-					<a class="panel-top-nav-link panel-top-nav-link_active" href="#">Songs</a>
-					<a class="panel-side-settings_nav" href="#">
-						<i class="i i_settings"></i>
-					</a>
-				</div>
-				<div class="panel-top_bottom">
-					<form class="panel-top-search">
-  						<button class="panel-top-search-submit" type="submit"><i class="i i_search"></i></button>
-  						<span class="panel-top-search-field"><input class="panel-top-search-input" type="text"></span>
-  						<button class="panel-top-search-reload"><i class="i i_reload"></i></button>
-					</form>				
-				</div>
-			</div>
-			<div class="playlist_panel-top">
+			<div  class="playlist_panel-top_item playlist_panel-top_songs">
 				<div class="playlist-scroll-top-panel"></div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
@@ -704,14 +666,20 @@
 			</div>
 		</div>
 		<script>
-			$(".state-playlist").click(function() {
-  				$(this).toggleClass("state-playlist-active");
+			$(".top-panel-text").click(function() {
+  				$(".state-playlist").toggleClass("state-playlist-active");
 			});
 		</script>
 		<script>
 			$(".panel-side-settings").click(function() {
-  				$(".state-artist").toggleClass("state-artist-active");
+  				$(".state-creation").toggleClass("state-creation-active");
 			});
 		</script>
-	</body>
+		<script>
+			$(".panel-top-nav").on("click", ".panel-top-nav-link", function(){
+			    $(".panel-top-nav .panel-top-nav-link").removeClass("panel-top-nav-link_active"); //удаляем класс во всех вкладках
+			    $(this).addClass("panel-top-nav-link_active");//добавляем класс текущей (нажатой
+			    var clickId = this.id; 
+			});
+		</script>
 </html>	
