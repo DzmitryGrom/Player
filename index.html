@@ -673,12 +673,17 @@
 		</script>
 		<script>
 			$(".top-panel-text").click(function() {
-  				$(".state-cover").toggleClass("transform: translateY(-100%)");
+  				$(".state-cover").toggleClass("state-cover-up");
 			});
 		</script>
 		<script>
 			$(".panel-side-settings").click(function() {
   				$(".state-creation").toggleClass("state-creation-active");
+			});
+		</script>
+		<script>
+			$(".panel-side-settings").click(function() {
+  				$(".state-cover").toggleClass("state-cover-down");
 			});
 		</script>
 		<script>
