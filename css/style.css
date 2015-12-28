@@ -8,13 +8,13 @@ body{
 	overflow: hidden;
 }
 .background{
-	background-image: url("../i/background.jpg");
 	position: absolute;
 	background-size: cover;
-	background-position: center top;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
+	top: -5%;
+	bottom: -5%;
+	left: -5%;
+	right: -5%;
 	-webkit-filter: blur(10px);
 
 }
@@ -238,7 +238,7 @@ body{
 	margin-left: 10px;
 }
 .panel-side-equalizer{
-	margin-right: 45px;
+	margin: 5px 45px 0px 0px;
 	display: inline-block;
 }
 .panel-equalizer-list{
@@ -813,11 +813,12 @@ body{
 .track-cover{
 	display: block;
 	margin: 0 auto;
-	max-height: 300px;
+	max-height: 320px;
 }
 .track-bar{
 	font-size: 0;
 	width: 70%;
+	max-width: 320px;
   	margin: 0 auto;
 }
 .track-bar-line{
@@ -842,7 +843,7 @@ body{
 	font-weight: 300;
 	font-family: Roboto;
 	font-size: 33px;
-	margin: 47px 0 0 0;
+	margin: 25px 0 0 0;
 }
 .track-caption{
 	font-family: Roboto;
