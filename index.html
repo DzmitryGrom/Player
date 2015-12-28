@@ -687,6 +687,11 @@
 			});
 		</script>
 		<script>
+			$(".panel-side-settings").click(function() {
+  				$(".state-playlist").toggleClass("playlist");
+			});
+		</script>
+		<script>
 			$(".panel-top-nav").on("click", ".panel-top-nav-link", function(){
 			    $(".panel-top-nav .panel-top-nav-link").removeClass("panel-top-nav-link_active"); //удаляем класс во всех вкладках
 			    $(this).addClass("panel-top-nav-link_active");//добавляем класс текущей (нажатой
