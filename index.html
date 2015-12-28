@@ -198,7 +198,7 @@
 				<div class="panel-top-nav">
 					<a id="artists" class="panel-top-nav-link panel-top-nav-link_active" href="#">Artists</a>		
 					<a id="albums" class="panel-top-nav-link" href="#">Albums</a>			
-					<a id="song" class="panel-top-nav-link" href="#">Songs</a>
+					<a id="songs" class="panel-top-nav-link" href="#">Songs</a>
 					<a  class="panel-side-settings" href="#">
 						<i class="i i_settings"></i>
 					</a>
@@ -211,7 +211,7 @@
 					</form>		
 				</div>
 			</div>
-			<div class="playlist_panel-top_item playlist_panel-top_artists">
+			<div class="playlist_panel-top_item playlist_panel-top_artists playlist_panel-top_artists-active">
 				<div class="playlist-scroll-top-panel"></div>
 				<div class="playlist-item_top-panel playlist-item_top-panel_artist">
 					<div class="pl-side_left">
@@ -668,34 +668,33 @@
 		</div>
 		<script>
 			$(".top-panel-text").click(function() {
-  				$(".state-playlist").toggleClass(" state-playlist-active");
-			});
-		</script>
-		<script>
-			$(".top-panel-text").click(function() {
+  				$(".state-playlist").toggleClass("state-playlist-active");
   				$(".state-cover").toggleClass("state-cover-up");
 			});
-		</script>
-		<script>
 			$(".panel-side-settings").click(function() {
   				$(".state-creation").toggleClass("state-creation-active");
-			});
-		</script>
-		<script>
-			$(".panel-side-settings").click(function() {
   				$(".state-cover").toggleClass("state-cover-down");
-			});
-		</script>
-		<script>
-			$(".panel-side-settings").click(function() {
   				$(".state-playlist").toggleClass("playlist");
 			});
-		</script>
-		<script>
 			$(".panel-top-nav").on("click", ".panel-top-nav-link", function(){
 			    $(".panel-top-nav .panel-top-nav-link").removeClass("panel-top-nav-link_active"); //удаляем класс во всех вкладках
 			    $(this).addClass("panel-top-nav-link_active");//добавляем класс текущей (нажатой
 			    var clickId = this.id; 
+			});
+			$("#artists").on("click", function(){
+				$(".playlist_panel-top_albums").removeClass("playlist_panel-top_albums-active");
+				$(".playlist_panel-top_songs").removeClass("playlist_panel-top_songs-active");
+				$(".playlist_panel-top_artists").addClass("playlist_panel-top_artists-active");
+			});
+			$("#albums").on("click", function(){
+				$(".playlist_panel-top_artists").removeClass("playlist_panel-top_artists-active");
+				$(".playlist_panel-top_songs").removeClass("playlist_panel-top_songs-active");
+				$(".playlist_panel-top_albums").addClass("playlist_panel-top_albums-active");
+			});
+			$("#songs").on("click", function(){
+				$(".playlist_panel-top_artists").removeClass("playlist_panel-top_artists-active");
+				$(".playlist_panel-top_albums").removeClass("playlist_panel-top_albums-active");
+				$(".playlist_panel-top_songs").addClass("playlist_panel-top_songs-active");
 			});
 		</script>
 </html>	

@@ -545,11 +545,13 @@ body{
 .playlist_panel-top_albums,
 .playlist_panel-top_songs{
 	transform: translatex(-100%);
+	transition: transform .6s;
 }
 .playlist_panel-top_artists-active,
 .playlist_panel-top_albums-active,
 .playlist_panel-top_songs-active{
 	transform: translatex(0%);
+	transition: transform .6s;
 }
 .playlist_panel-top-artist_album-wrapper{
 	margin: 0 auto;
