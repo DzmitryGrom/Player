@@ -196,6 +196,14 @@ body{
 	transform: translateY(0%);
 	transition: transform .6s;
 }
+.state-equalizer{
+	transition: transform .6s;
+	transform: translateY(-100%);
+}
+.state-equalizer-active{
+	transition: transform .6s;
+	transform: translateY(0%);
+}
 .panel_top{
 	font-size: 0;
 	text-align: center;

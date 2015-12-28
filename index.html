@@ -589,10 +589,10 @@
 				</div>
 			</div>
 		</div>
-		<div style="display:none" class="state">
+		<div class="state state-equalizer">
 			<div class="panel panel_top panel_top-album">
 				<div class="panel-side panel-side_left">
-					<span class="panel-side-title"><i class="i arrow-back"></i><span class="panel-side-tittle-text">Equalizer</span></span>
+					<span class="panel-side-title arrow-back-eq"><i class="i arrow-back"></i><span class="panel-side-tittle-text">Equalizer</span></span>
 				</div>
 				<div class="panel-side panel-side_right">
 					<form class="equalizer-switch-wrapper">
@@ -695,6 +695,16 @@
 				$(".playlist_panel-top_artists").removeClass("playlist_panel-top_artists-active");
 				$(".playlist_panel-top_albums").removeClass("playlist_panel-top_albums-active");
 				$(".playlist_panel-top_songs").addClass("playlist_panel-top_songs-active");
+			});
+			$(".panel-side-equalizer").click(function() {
+  				$(".state-equalizer").addClass("state-equalizer-active");
+  				$(".state-cover").addClass("state-cover-down");
+  				$(".state-playlist").addClass("playlist");
+			});
+			$(".arrow-back-eq").click(function() {
+  				$(".state-equalizer").removeClass("state-equalizer-active");
+  				$(".state-cover").removeClass("state-cover-down");
+  				$(".state-playlist").removeClass("playlist");
 			});
 		</script>
 </html>	
