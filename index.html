@@ -11,7 +11,7 @@
 	<body>
 		<i class="d"></i>
 		<div style="background-image: url(i/background.jpg)" class="background"></div>
-		<div  class="state">
+		<div  class="state state-cover">
 			<div class="panel panel_top">
 				<div class="panel-side panel-side_left">
 					<span class="panel-side-title"><i class="i i_arrow"></i><span class="panel-side-tittle-text">Now Playing</span></span>
@@ -55,7 +55,7 @@
 				</a>
 			</div>			
 		</div>
-		<div   class="state state-playlist">
+		<div  class="state state-playlist">
 			<div class="panel panel_top panel_bg">
 				<span class="top-panel-text">Playlist</span>
 			</div>
@@ -668,7 +668,12 @@
 		</div>
 		<script>
 			$(".top-panel-text").click(function() {
-  				$(".state-playlist").toggleClass("state-playlist-active");
+  				$(".state-playlist").toggleClass(" state-playlist-active");
+			});
+		</script>
+		<script>
+			$(".top-panel-text").click(function() {
+  				$(".state-cover").toggleClass("transform: translateY(-100%)");
 			});
 		</script>
 		<script>

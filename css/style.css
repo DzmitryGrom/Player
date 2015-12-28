@@ -162,17 +162,26 @@ body{
 	width: 100%;
 	min-height: 100%;
 	position: absolute;
+
+}
+.state-cover{
+	transform: translateY(0%);
+	transition: transform .6s;
 }
 .state-playlist{
 	margin-top: -60px;
 	transform: translateY(100%);
 	position: absolute;
+	transition: transform .6s;
 }
 .state-playlist-active{
 	position: absolute;
 	transform: translateY(0%);
 	margin-top: 0px;
 	transition: transform .6s;
+}
+.state-cover-degradation{
+	transform: translateY(-100%);
 }
 .state-creation{
 	transform: translateY(-100%);
