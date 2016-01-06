@@ -18,7 +18,6 @@ body{
 	-webkit-filter: blur(10px);
 
 }
-../i/background.jpg
 .d{
 	width: 360px;
 	height: 640px;
@@ -40,6 +39,10 @@ body{
 	background-image: url("../i/interface/arrow.png");
 	width: 14px;
 	height: 13px;
+}
+.arrow-eq_transform{
+	transform: rotate(90deg);
+
 }
 .arrow-back{
 	background-image: url("../i/interface/arrow-back.png");
@@ -87,8 +90,10 @@ body{
 }
 .i_equalizer-switch{
 	background-image: url("../i/interface/switch.png");
-	width: 24px;
-	height: 24px;
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	bottom: 0
 }
 .i_shufle{
 	background-image: url("../i/interface/shuffle.png");
@@ -99,8 +104,8 @@ body{
 	background-image: url("../i/interface/sound.png");
 	width: 24px;
 	height: 24px;
-	position: relative;
-	right: 13px;
+	position: absolute;
+	right: -10px;
 }
 .i_sound-active{
 	background-image: url("../i/interface/sound-active.png");
@@ -109,9 +114,13 @@ body{
 }
 .i_power{
 	background-image: url("../i/interface/power.png");
-	width: 100px;
-	height: 100px;
-	margin-bottom: 8px;
+	max-width: 100px;
+	max-height: 100px;
+	position: absolute;
+	bottom: 54px;
+	min-height: 90px;
+	min-width: 90px;
+	background-repeat: no-repeat;
 }
 .i_prev{
 	background-image: url("../i/interface/prev.png");
@@ -163,6 +172,14 @@ body{
 	min-height: 100%;
 	position: absolute;
 }
+.state-albums{
+	transform: translateX(-100%);
+	transition: transform .6s;
+}
+.state-artists{
+	transform: translateX(-100%);
+	transition: transform .6s;
+}
 .state-cover{
 	transform: translateY(0%);
 	transition: transform .6s;
@@ -191,6 +208,7 @@ body{
 }
 .state-creation{
 	transform: translateY(-100%);
+	transition: transform .6s;
 }
 .state-creation-active{
 	transform: translateY(0%);
@@ -198,11 +216,11 @@ body{
 }
 .state-equalizer{
 	transition: transform .6s;
-	transform: translateY(-100%);
+	transform: translateX(-100%);
 }
 .state-equalizer-active{
 	transition: transform .6s;
-	transform: translateY(0%);
+	transform: translateX(0%);
 }
 .panel_top{
 	font-size: 0;
@@ -210,7 +228,7 @@ body{
 	padding-bottom: 17px;
 }
 .panel_top-album{
-	padding-bottom: 1px;
+	padding-bottom: 0px;
 }
 .panel-top_nav{
 	font-size: 0;
@@ -266,18 +284,22 @@ body{
 }
 .panel-equalizer-list{
 	text-align: center;
-	margin: 20px auto 20px auto;
 	font-size: 0px;
+	position: absolute;
+	width: 100%;
+	height: 25%;
+	top: 60px;
 }
 .panel-equalizer-element{
 	display: inline-block;
 	width: 17%;
-}
-.panel-equalizer-wrapper{
+	height: 100%;
 }
 .panel-equalizer_line{
 	border-left: 3px solid #91828d;
-	height: 200px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
 	width: 1px;
 	display: inline-block;
 } 
@@ -289,21 +311,24 @@ body{
 	color:  rgba(255, 255, 255, 0.8);
 	font-size: 10px;
 	font-weight: 400;
-	display: block;
-	margin: 20px 5px 0px 0px;
+	position: absolute;
+	bottom: 0px;
+	margin-bottom: -25px;
+	margin-left: -6px;
 }
 .panel-equalizer-btn_mode-list{
 	text-align: center;
-	width: 80%;
-	margin: 0px auto;
 	font-size: 0px;
-	margin-bottom: 10px;
+	position: absolute;
+	bottom: 35%;
+	width: 100%;
+	height: 20%;
 }
-.panel-equalizer-btn_mode-element{
+.panel-equalizer-btn_mode-menu-list{
 	border-radius: 10px;
 	display: none;
-	top: 320px;
-	width: 80%;
+	top: 32px;
+	width: 100%;
     background-color: #FF5252;
     position: absolute;
     z-index: 1;
@@ -326,7 +351,12 @@ body{
     padding: 6px 0px 6px 0px;
     display: inline-block;
     width: 31%;
+    outline: none;
     margin-right: 4%;
+}
+.panel-equalizer-btn_function-surround_off{
+	box-shadow: inset rgba(0,0,0,.6) 0 0px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
+	background-color: transparent;
 }
 .panel-equalizer-btn-function-element_active{
 	text-align: left;
@@ -338,11 +368,10 @@ body{
 	width: 65%;
 	margin-top: 20px;
 }
-.panel-equalizer-btn-function-element{
+.panel-equalizer-btn-function-menu-list{
 	border-radius: 10px;
 	display: none;
-	top: 386px;
-	width: 52%;
+	width: 65%;
     background-color: #FF5252;
     position: absolute;
     z-index: 1;
@@ -363,7 +392,8 @@ body{
 	display: inline-block;
 	margin-left: 25px;
 }
-.panel-equalizer-btn_mode-element_text{
+.panel-equalizer-btn_mode-menu-item,
+.panel-equalizer-btn_mode-selected{
 	font-family: Roboto;
 	color:  rgba(235, 235, 249, 0.9);
 	font-size: 20px;
@@ -371,25 +401,29 @@ body{
 	display: block;
 	text-align: center;
 }
-.bottom-panel_top-panel-equalizer{
+.bottom-panel_top-panel-equalizer-caption{
 	background-color:  rgba(29, 39, 44, 0.5);
 	text-align: center;
 	font-size: 0px;
-	padding: 32px 0px 32px 0px;
+	padding: 0px;
+	margin: 0px;
 	position: absolute;
-    bottom: 0;
     width: 100%;
+    bottom: 0px;
+    height: 28%;
 }
-.bottom-panel_top-panel-equalizer_power{
+.bottom-panel_top-panel-equalizer_power-item{
 	width: 50%;
 	display: inline-block;
+	height: 100%
 }
 .bottom-panel_top-panel-equalizer_power-text{
 	font-family: Roboto;
 	color:  rgba(235, 235, 249, 0.8);
 	font-size: 13px;
 	font-weight: 300;
-	display: block;
+	position: absolute;
+	bottom: 20px;
 }
 .bottom-panel_top-panel-equalizer_power-value{
 	font-family: Roboto;
@@ -397,6 +431,20 @@ body{
 	font-size: 20px;
 	font-weight: 500;
 	margin-left: 5px;
+}
+.power_vol{
+	transform: rotate(270deg);
+	left: 10%;
+}
+.power_bass{
+	transform: rotate(270deg);
+	right: 10%;
+}
+.power-text_vol{
+	left: 10%;
+}
+.power-text_bass{
+	right: 10%;
 }
 .panel-side-settings{
 	position: absolute;
@@ -475,19 +523,17 @@ body{
 .panel-shadow-artist{
 	padding: 46px 0 46px 0;
     background-color:  rgba(29, 39, 44, 0.5);
-    margin-top: -50px;
+    margin-top: -70px;
 }
 .panel-shadow-artist-site{
 	background-color: rgba(29, 39, 44, 0.99);
-	position: absolute;
 	z-index: 1;
 	height: 81px;
-	width: 100%;
 	text-align: center;
 }
 .panel-shadow-artist-text-top{
-	margin: 15px 0 0 0;
 	font-family: Roboto;
+	padding-top: 15px;
 	color:  rgba(235, 235, 250, 0.9);
 	font-size: 20px;
 	display: block;
@@ -509,22 +555,22 @@ body{
   	top: 60px;
   	overflow: hidden;
 }
-.playlist_artist-albums-list{
+.playlist_artist-albums-caption{
 	text-align: center;
-	margin-top: 22px
+	margin-top: -50px
 }
 .playlist_artist-other-albums-wrapper{
 	position: relative;
 	bottom: 130px;
+	margin-bottom: 30px;
 }
 .playlist_artist-album-year{
 	font-family: Roboto;
 	color: rgba(235, 235, 250, 0.9);
 	font-size: 20px;
 	font-weight: 300;
-	position: relative;
-	top: 74px;
-    right: 130px;
+	position: absolute;
+	bottom: 161px;
 
 }
 .playlist_artist-other-albums{
@@ -532,39 +578,37 @@ body{
 	height: 150px;
 }
 .playlist_artist-album_foto{
-	width: 360px;
+	width: 100%;
+	max-width: 500px;
 	display: block;
 	margin: 0 auto;
 	height: 217px;
 	opacity: 0.4;
+	-webkit-filter: blur(5px);
 }
-.playlist_panel-top_item{
-	position: absolute;
-	display: inline;
-  	left: 0;
-  	right: 0;
-  	bottom: 0;
-  	top: 130px;
-  	overflow: hidden;
-  
-
+.playlist_panel-top_caption{
+	margin-top: 10px;
+  	white-space: nowrap;
+  	transform:translatex(0%);
+  	transition: transform .6s;
+  	font-size: 0px;
 }
 .playlist_panel-top_artists,
 .playlist_panel-top_albums,
 .playlist_panel-top_songs{
-	transform: translatex(-100%);
-	transition: transform .6s;
+	display: inline-block;
+	min-width: 100%;
+	vertical-align: top;
 }
-.playlist_panel-top_artists-active,
-.playlist_panel-top_albums-active,
-.playlist_panel-top_songs-active{
-	transform: translatex(0%);
-	transition: transform .6s;
+.playlist_panel-top_albums{
+	white-space: normal;
 }
-.playlist_panel-top-artist_album-wrapper{
+.playlist_panel-top-artist_album-caption{
 	margin: 0 auto;
-	width: 300px;
-    height: 239px;
+	max-width: 350px;
+	position: relative;
+	max-height: 307px;
+	padding: 0px 30px 0px 30px;
 }
 .playlist_panel-top-artist_album{
 	width: 100%;
@@ -574,9 +618,10 @@ body{
 .playlist_panel-top-artist_info{
 	background-color: rgba(0, 0, 0, 0.75);
 	position: absolute;
-    bottom: 332px;
+    bottom: 0px;
+    left: 30px;
+    right: 30px;
     padding: 15px 0 17px 0;
-    width: 300px;
 }
 .playlist_panel-top-artist_info-text-top{
  	font-size: 23px;
@@ -606,7 +651,7 @@ body{
 }
 .playlist_panel-top-artist_info-btn{
 	background-color: rgba(4, 165, 190, 0.8);
-	width: 125px;
+	width: 30%;
 	height: 29px;
 	border: none;
 	border-radius: 6px;
@@ -707,9 +752,13 @@ body{
 	text-shadow: 2px 4px 5px rgba(49, 49, 64, 0.75);
 }
 .playlist-item .pl-side_right .i_scale{
+	display: none;
 	position: relative;
 	top: 6px;
 	right: 17px;
+}
+.playlist-item-select .pl-side_right .i_scale{
+	display: inline-block;
 }
 .playlist-scroll{
 	position: absolute;
@@ -722,7 +771,9 @@ body{
 }
 .playlist-scroll-top-panel{
 	position: absolute;
-	top: 7px;
+	margin-top: 124px;
+	top: 0px;
+	z-index: 2;
 	right: 2px;
  	border-radius:500px;
 	height: 64px;
@@ -895,6 +946,12 @@ body{
 	padding-top: 8px;
 	padding-left: 7px;
 }
+.text_on{
+	float: left;
+}
+.text_off{
+	float: right;
+}
 .bottom-panel{
 	background-color:  rgba(29, 39, 44, 0.8);
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
@@ -958,15 +1015,22 @@ body{
 	width: 100%;
 	height: 100%;
 }
+.equalizer-switch_off{
+	right: 58%;
+	transform: .6s;
+}
 .equalizer-switch-wrapper{
 	width: 66px;
 	height: 29px;
 	display: inline-block;
+	outline: none;
 }
 .equalizer-switch_btn{
 	text-align: right;
 	width: 100%;
 	height: 100%;
+	outline: none;
+	position: relative;
 	border-radius: 100px;
     box-shadow: inset rgba(5, 5, 5,.6) 0 3px 2px, inset 0 0px 4px, rgba(250, 87, 87,.8) 0 0px 0px -1px;
 	border: none;
@@ -975,7 +1039,21 @@ body{
 .equalizer-switch_btn-text{
 	font-family: Roboto;
 	color:  #ffffff;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
-	float: left;
+}
+.mode-menu-list_selections{
+	display: block;
+}
+@media only screen and (max-width: 500px){
+	.playlist_artist-album_foto{
+		margin: 0 auto;
+		transition: transform .6s;
+	}
+}
+@media only screen and (max-width: 335px){
+	.playlist_panel-album-reload{
+		left: 83%;
+		transition: transform .6s;
+	}
 }
