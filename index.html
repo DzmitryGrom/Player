@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<i class="d"></i>
-		<div style="background-image: url(i/background.jpg)" class="background"></div>
+		<div style="background-image: url(http://www.zastavki.com/pictures/640x480/2012/Music_Linkin_Park_Group_034037_29.jpg)" class="background"></div>
 		<div  class="state state-cover">
 			<div class="panel panel_top">
 				<div class="panel-side panel-side_left">
@@ -326,8 +326,6 @@
 							<img src="i/hot-limit.png" class="playlist-item_albums-icon"></img>
 							<p class="playlist-item_albums-text">Hot Limit</p>
 						</div>
-					
-					
 						<div class="playlist-item_albums-elements">
 							<img src="i/man_black.png" class="playlist-item_albums-icon"></img>
 							<p class="playlist-item_albums-text">21st Century <br> Breakdown</p>
@@ -475,37 +473,35 @@
 					</a>
 				</div>
 			</div>
-			<div class="playlist_panel-slider-wrapper">
-				<div class="playlist_panel-slider">
-					<div class="playlist_panel-slider_element-left">
-						<div class="playlist_panel-slider_element">
-							<img class="slider_img" src="i/carusel-left.png">
-						</div>
-						<div class="playlist_panel-slider_element">	
-							<img class="slider_img" src="i/carusel-right.png">
-						</div>
-						<div class="playlist_panel-slider_element">	
-							<img class="slider_img" src="i/carusel-right.png">
-						</div>
+			<div class="playlist_panel-slider">
+				<div class="playlist_panel-slider_element-left">
+					<div class="playlist_panel-slider_element">
+						<img class="slider_img" src="i/carusel-left.png">
 					</div>
-					<div class="playlist_panel-slider_element-active">	
-						
-							<img class="slider_img" src="i/carusel-top.png">
-							<button class="playlist_panel-slider-reload"><i class="i i_reload"></i></button>
-						
+					<div class="playlist_panel-slider_element">	
+						<img class="slider_img" src="i/carusel-right.png">
 					</div>
-					<div class="playlist_panel-slider_element-right">	
-						<div class="playlist_panel-slider_element">	
-							<img class="slider_img" src="i/carusel-right.png">
-						</div>
-						<div class="playlist_panel-slider_element">	
-							<img class="slider_img" src="i/carusel-right.png">
-						</div>
-						<div class="playlist_panel-slider_element">	
-							<img class="slider_img" src="i/carusel-right.png">
-						</div>	
-					</div>		
+					<div class="playlist_panel-slider_element">	
+						<img class="slider_img" src="i/carusel-right.png">
+					</div>
 				</div>
+				<div class="playlist_panel-slider_element-active">	
+					
+						<img class="slider_img" src="i/carusel-top.png">
+						<button class="playlist_panel-slider-reload"><i class="i i_reload"></i></button>
+					
+				</div>
+				<div class="playlist_panel-slider_element-right">	
+					<div class="playlist_panel-slider_element">	
+						<img class="slider_img" src="i/carusel-right.png">
+					</div>
+					<div class="playlist_panel-slider_element">	
+						<img class="slider_img" src="i/carusel-right.png">
+					</div>
+					<div class="playlist_panel-slider_element">	
+						<img class="slider_img" src="i/carusel-right.png">
+					</div>	
+				</div>		
 			</div>
 			<div class="playlist_panel-top-album playlist_panel-top">
 				<div class="playlist-scroll-top-panel" style="top:2%"></div>
@@ -719,7 +715,7 @@
 				$(".state-creation-active").css("transform" , "translateX(100%)");
 				$(".state-artists").css("transform" , "translateX(0%)");
 			});
-			$(".text-link_back-artists").on("click", function(){
+			$(".text-link_back").on("click", function(){
 				$(".state-artists").css("transform" , "translateX(-100%)");
 				$(".state-creation-active").css("transform" , "");
 			});
