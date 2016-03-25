@@ -87,6 +87,24 @@ body{
 	width: 2px;
 	height: 15px;
 }
+.i_sound{
+	background-image: url("../i/interface/sound.png");
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	margin-left: -14px;
+	margin-top: -12px;
+}
+.i_sound:hover{
+	background-image: url("../i/interface/sound-active.png");
+	width: 24px;
+	height: 24px;
+}
+.i_shufle{
+	background-image: url("../i/interface/shuffle.png");
+	width: 23px;
+	height: 20px;
+}
 .i_equalizer{
 	background-image: url("../i/interface/equalizer.png");
 	width: 23px;
@@ -98,24 +116,6 @@ body{
 	height: 26px;
 	position: absolute;
 	bottom: 0
-}
-.i_shufle{
-	background-image: url("../i/interface/shuffle.png");
-	width: 23px;
-	height: 20px;
-}
-.i_sound{
-	background-image: url("../i/interface/sound.png");
-	width: 24px;
-	height: 24px;
-	position: absolute;
-	right: -10px;
-	margin-top: -12px;
-}
-.i_sound-active{
-	background-image: url("../i/interface/sound-active.png");
-	width: 24px;
-	height: 24px;
 }
 .i_power{
 	background-image: url("../i/interface/power.png");
@@ -227,6 +227,15 @@ body{
 	transition: transform .6s;
 	transform: translateX(0%);
 }
+.scroll{
+	right: 2px;
+	border-radius:500px;
+	height: 64px;
+	width: 5px;
+	background-color: #ff5252;
+	position: absolute;
+	z-index: 3;
+}
 .panel_top{
 	font-size: 0;
 	text-align: center;
@@ -290,9 +299,10 @@ body{
 .panel-equalizer-list{
 	text-align: center;
 	font-size: 0px;
+	margin-top: 12px;
 	position: absolute;
 	width: 100%;
-	height: calc(30% - 46px);
+	height: calc(40% - 46px);
 }
 .panel-equalizer-element{
 	display: inline-block;
@@ -322,9 +332,12 @@ body{
 .panel-equalizer-btn_mode-list{
 	text-align: center;
 	font-size: 0px;
+	margin-top: 30px;
 	position: absolute;
-	top: 30%;
-	width: 100%;
+	top: 40%;
+	left: 5%;
+	right: 5%;
+	width: 90%;
 	height: 20%;
 }
 .panel-equalizer-btn_mode-menu-list{
@@ -775,14 +788,12 @@ body{
 }
 .playlist-scroll-top-panel{
 	position: absolute;
-	margin-top: 124px;
-	top: 0px;
+	top: 120px;
 	z-index: 2;
-	right: 2px;
- 	border-radius:500px;
-	height: 64px;
-	width: 5px;
-	background-color: #ff5252;
+	width: 7px;
+	height: 100%;
+	right: 0px;
+	bottom: 0;
 }
 .pl-side_left{
   	width: 81%;
@@ -1045,6 +1056,9 @@ body{
 	color:  #ffffff;
 	font-size: 14px;
 	font-weight: 300;
+}
+.hidden{
+	display: none;
 }
 .mode-menu-list_selections{
 	display: block;
