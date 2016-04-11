@@ -28,7 +28,7 @@
 			<div class="track">
 				<img class="track-cover" style="max-width: 70%" src="i/cover.png">
 					<div class="track-bar">
-						<a style="width:82%" class="track-bar-line" href="#"><span class="track-bar-value">2.50</snan></a>
+						<a style="width:82%" class="track-bar-line" href="#"><span class="track-bar-value">2.50</span></a>
 					</div>
 					<h2 class="track-albom">Cannonballs</h2>
 					<h3 class="track-caption">
@@ -53,14 +53,15 @@
 				<a class="controller-btn" href="#">
 					<i class="i i_repeat"></i>
 				</a>
+				
 			</div>			
 		</div>
-		<div  class="state state-playlist">
+		<div class="state state-playlist">
 			<div class="panel panel_top panel_bg">
 				<span class="top-panel-text">Playlist</span>
 			</div>
 			<div class="playlist">
-				<div class="playlist-scroll"></div>
+				<div class="playlist-scroll-top-panel playlist-scroll-top-panel_pl"><i id="scrollPlaylist" class="scroll"></i></div>
 				<div class="playlist-item playlist-item-select">
 					<div class="pl-side_left">
 						<span class="pl-text_top">Deep Roots</span>
@@ -213,15 +214,16 @@
 				</div>
 			</div>
 
-			<div class="playlist-scroll-top-panel"><i class="scroll"></i></div>
-
-			<div class="playlist_panel-top_caption">
+			
+               
+			<div id="pl_caption" class="playlist_panel-top_caption">
 				<div class="playlist_panel-top_artists">
+				     <div class="playlist-scroll-top-panel playlist-scroll-top-panel_artists"><i id="scrollCreationArtists" class="scroll"></i></div>
 					<div class="playlist-item playlist-item_top-panel_artist text-link-artists">
 						<div class="pl-side_left">
 							<i class="pl-side-left-page pl-side-left-page-avenged"></i>
 							<div class="pl-top-panel-text">
-								<span class="pl-text-panel-top">Avenged Sevenfold</span>
+								<span class="playlist-search pl-text-panel-top">Avenged Sevenfold</span>
 								<span class="pl-text-panel-botton ">Following</span>
 							</div>	
 						</div>
@@ -235,7 +237,7 @@
 						<div class="pl-side_left">
 							<i class="pl-side-left-page pl-side-left-page-bad"></i>
 							<div class="pl-top-panel-text">
-								<span class="pl-text-panel-top">Bad salad</span>
+								<span class="playlist-search pl-text-panel-top">Bad salad</span>
 								<span class="pl-text-panel-botton"></span>
 							</div>	
 						</div>
@@ -249,7 +251,7 @@
 						<div class="pl-side_left">
 							<i class="pl-side-left-page pl-side-left-page-black"></i>
 							<div class="pl-top-panel-text">
-								<span class="pl-text-panel-top">Black Light Burns</span>
+								<span class="playlist-search pl-text-panel-top">Black Light Burns</span>
 								<span class="pl-text-panel-botton">Following</span>
 							</div>	
 						</div>
@@ -263,7 +265,7 @@
 						<div class="pl-side_left">
 							<i class="pl-side-left-page pl-side-left-page-bodyslam"></i>
 							<div class="pl-top-panel-text">
-								<span class="pl-text-panel-top">Bodyslam</span>
+								<span class="playlist-search pl-text-panel-top">Bodyslam</span>
 								<span class="pl-text-panel-botton"></span>
 							</div>	
 						</div>
@@ -277,7 +279,7 @@
 						<div class="pl-side_left">
 							<i class="pl-side-left-page pl-side-left-page-breaking"></i>
 							<div class="pl-top-panel-text">
-								<span  class="pl-text-panel-top">Breaking Benjamin</span>
+								<span  class="playlist-search pl-text-panel-top">Breaking Benjamin</span>
 								<span  class="pl-text-panel-botton"></span>
 							</div>	
 						</div>
@@ -291,7 +293,7 @@
 						<div class="pl-side_left">
 							<i class="pl-side-left-page pl-side-left-page-cocktail"></i>
 							<div class="pl-top-panel-text">
-								<span  class="pl-text-panel-top">Coctail</span>
+								<span  class="playlist-search pl-text-panel-top">Coctail</span>
 								<span  class="pl-text-panel-botton"></span >
 							</div>	
 						</div>
@@ -302,51 +304,53 @@
 						</div>
 					</div>
 				</div>
-				<div  class="playlist_panel-top_albums">
+				<div class="playlist_panel-top_albums">
+                    <div class="playlist-scroll-top-panel playlist-scroll-top-panel_artists"><i id="scrollCreationAlbums" class="scroll"></i></div>
 					<div class="playlist-item_top-panel">
 						<div class="playlist-item_albums-elements">
-							<img class="playlist-item_albums-icon" src="i/muse.png"></img>
-							<p class="playlist-item_albums-text">21st Century <br> Breakdown</p>
+							<img class="playlist-item_albums-icon" src="i/muse.png">
+							<span class="playlist-search playlist-item_albums-text">21st Century <br> Breakdown</span>
 						</div>
 						<div class="playlist-item_albums-elements">
-							<img  src="i/dahlia.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Dahlia</p>
+							<img  src="i/dahlia.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Dahlia</span>
 						</div>
-						<div class="playlist-item_albums-elements">
-							<img src="i/red-line.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Boys Like  Girls</p>
+						<div class="playlist-item_albums-elements ">
+							<img src="i/red-line.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Boys Like  Girls</span>
 						</div>
 
 						<div class="playlist-item_albums-elements">
-							<img src="i/coast.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Dharmajati</p>
+							<img src="i/coast.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Dharmajati</span>
 						</div>
 						<div class="playlist-item_albums-elements">
-							<img src="i/round.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Echoes, Silence,<br>Patience & Grace</p>
+							<img src="i/round.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Echoes, Silence,<br>Patience & Grace</span>
 						</div>
 						<div class="playlist-item_albums-elements">
-							<img src="i/hot-limit.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Hot Limit</p>
+							<img src="i/hot-limit.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Hot Limit</span>
 						</div>
 						<div class="playlist-item_albums-elements">
-							<img src="i/man_black.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">21st Century <br> Breakdown</p>
+							<img src="i/man_black.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">21st Century <br> Breakdown</span>
 						</div>
 						<div class="playlist-item_albums-elements">
-							<img src="i/dove.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Dahlia</p>
+							<img src="i/dove.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Dahlia</span>
 						</div>
 						<div class="playlist-item_albums-elements">
-							<img src="i/roven.png" class="playlist-item_albums-icon"></img>
-							<p class="playlist-item_albums-text">Boys Like <br> Girls</p>
+							<img src="i/roven.png" class="playlist-item_albums-icon">
+							<span class="playlist-search playlist-item_albums-text">Boys Like <br> Girls</span>
 						</div>
 					</div>
 				</div>
 				<div  class="playlist_panel-top_songs">
+                    <div class="playlist-scroll-top-panel"><i id="scrollCreationSongs" class="scroll"></i></div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Knights of Cyndonia</span>
+							<span class="pl-text_top playlist-item_songs-text">Knights of Cyndonia</span>
 							<span class="pl-text_botton">Blackhole and Revelations-Muse</span>
 						</div>
 						<div class="pl-side_right">
@@ -360,8 +364,8 @@
 					
 					<div class="playlist-item playlist-item-select">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Nemo</span>
-							<span class="pl-text_botton">Dark Passion Pray-Nightwish</span>
+							<span class="playlist-item_songs-text pl-text_top">Nemo</span>
+							<span class=" pl-text_botton">Dark Passion Pray-Nightwish</span>
 						</div>
 						<div class="pl-side_right">
 							<div class="pl-time-side_right">
@@ -373,8 +377,8 @@
 					</div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Welcome to Black Parade</span>
-							<span class="pl-text_botton">The Black Parade-My Chemical Romances</span>
+							<span class="playlist-item_songs-text pl-text_top">Welcome to Black Parade</span>
+							<span class=" pl-text_botton">The Black Parade-My Chemical Romances</span>
 						</div>
 						<div class="pl-side_right">
 							<div class="pl-time-side_right">
@@ -386,8 +390,8 @@
 					</div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Nemo</span>
-							<span class="pl-text_botton">Dark Passion Pray-Nightwish</span>
+							<span class="playlist-item_songs-text pl-text_top">Nemo</span>
+							<span class=" pl-text_botton">Dark Passion Pray-Nightwish</span>
 						</div>
 						<div class="pl-side_right">
 							<div class="pl-time-side_right">
@@ -399,8 +403,8 @@
 					</div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Numb</span>
-							<span class="pl-text_botton">Meteora-Linkin Park</span>
+							<span class="playlist-item_songs-text pl-text_top">Numb</span>
+							<span class=" pl-text_botton">Meteora-Linkin Park</span>
 						</div>
 						<div class="pl-side_right">
 							<div class="pl-time-side_right">
@@ -412,8 +416,8 @@
 					</div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Omen</span>
-							<span class="pl-text_botton">Invader Must Die-The Prodigy</span>
+							<span class="playlist-item_songs-text pl-text_top">Omen</span>
+							<span class=" pl-text_botton">Invader Must Die-The Prodigy</span>
 						</div>
 						<div class="pl-side_right">
 							<div class="pl-time-side_right">
@@ -425,7 +429,20 @@
 					</div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Welcome to Black Parade</span>
+							<span class="playlist-item_songs-text pl-text_top">Welcome to Black Parade</span>
+							<span class=" pl-text_botton">Unknown Artist</span>
+						</div>
+						<div class="pl-side_right">
+							<div class="pl-time-side_right">
+								<span class="pl-item-time">3.30</span>
+								<i class="i i_setting-red"></i>
+							</div>
+							<div  class="i i_scale"></div>
+						</div>
+					</div>
+					<div class="playlist-item">
+						<div class="pl-side_left">
+							<span class="playlist-item_songs-text pl-text_top">Welcome to Black Parade</span>
 							<span class="pl-text_botton">Unknown Artist</span>
 						</div>
 						<div class="pl-side_right">
@@ -438,20 +455,7 @@
 					</div>
 					<div class="playlist-item">
 						<div class="pl-side_left">
-							<span class="pl-text_top">Welcome to Black Parade</span>
-							<span class="pl-text_botton">Unknown Artist</span>
-						</div>
-						<div class="pl-side_right">
-							<div class="pl-time-side_right">
-								<span class="pl-item-time">3.30</span>
-								<i class="i i_setting-red"></i>
-							</div>
-							<div  class="i i_scale"></div>
-						</div>
-					</div>
-					<div class="playlist-item">
-						<div class="pl-side_left">
-							<span class="pl-text_top">Welcome to Black Parade</span>
+							<span class="playlist-item_songs-text pl-text_top">Welcome to Black Parade</span>
 							<span class="pl-text_botton">Unknown Artist</span>
 						</div>
 						<div class="pl-side_right">
@@ -648,14 +652,14 @@
 			</div>
 			<div class="bottom-panel_top-panel-equalizer-caption">
 				<div class="bottom-panel_top-panel-equalizer_power-item">
-					<i class="i i_power power_vol"></i>
+					<i style="transform: rotate(270deg);" class="i i_power power_vol"></i>
 					<i class="bottom-panel_top-panel-equalizer_power-text power-text_vol">
 							Volume
 							<i class="bottom-panel_top-panel-equalizer_power-value">75%</i>
 						</i>
 				</div>
 				<div class="bottom-panel_top-panel-equalizer_power-item">
-					<i class="i i_power power_bass"></i>
+					<i id="powerBass" style="transform: rotate(270deg);" class="i i_power power_bass"></i>
 						<i class="bottom-panel_top-panel-equalizer_power-text power-text_bass">
 							Bass
 							<i  class="bottom-panel_top-panel-equalizer_power-value">75%</i>
@@ -676,6 +680,190 @@
 			</div>
 		</div>
 		<script>
+                // тачь скролы
+                var scrolTouchCreationArt = document.querySelector('#scrollCreationArtists'),
+                    scrolTouchCreationAlb = document.querySelector('#scrollCreationAlbums'),
+                    scrolToichPlaylist = document.querySelector('#scrollPlaylist'),
+                    powerBass = document.querySelector('#powerBass'),
+                    scrolTouchCreationSng = document.querySelector('#scrollCreationSongs');
+                
+                // тачь скрол artists
+                scrolTouchCreationArt.addEventListener('touchstart', function(event) {
+                    event.preventDefault();
+
+                }, false);
+
+                scrolTouchCreationArt.addEventListener('touchmove', function(event) {
+
+                    var y = event.touches[0].pageY,
+                        y = y - 150;
+                        maxY = 0;
+                        minY = scrolTouchCreationArt.parentElement.clientHeight - 95;
+                        console.log(y)
+                    if(y < maxY){
+                        y = maxY;
+                    };
+                    if(y > minY){
+                        y = minY;
+                    }
+
+                    scrolTouchCreationArt.style.top = y + 'px';
+
+                }, false);
+
+                scrolTouchCreationArt.addEventListener('touchend', function(event) {
+                    event.preventDefault();
+
+                }, false);
+
+            // тачь скрол albums
+             scrolTouchCreationAlb.addEventListener('touchstart', function(event) {
+                    event.preventDefault();
+
+                }, false);
+
+                scrolTouchCreationAlb.addEventListener('touchmove', function(event) {
+
+                    var y = event.touches[0].pageY,
+                        y = y - 150;
+                        maxY = 0;
+                        minY = scrolTouchCreationAlb.parentElement.clientHeight - 95;
+                        console.log(y)
+                    if(y < maxY){
+                        y = maxY;
+                    };
+                    if(y > minY){
+                        y = minY;
+                    }
+
+                    scrolTouchCreationAlb.style.top = y + 'px';
+
+                }, false);
+
+                scrolTouchCreationAlb.addEventListener('touchend', function(event) {
+                    event.preventDefault();
+
+                }, false);
+			function is_touch_device() {  
+              try {  
+                document.createEvent("TouchEvent");  
+                return true;  
+              } catch (e) {  
+                return false;  
+              }  
+            }
+            
+            // тачь скрол songs
+             scrolTouchCreationSng.addEventListener('touchstart', function(event) {
+                    event.preventDefault();
+
+                }, false);
+
+                scrolTouchCreationSng.addEventListener('touchmove', function(event) {
+
+                    var y = event.touches[0].pageY,
+                        y = y - 150;
+                        maxY = 0;
+                        minY = scrolTouchCreationSng.parentElement.clientHeight - 95;
+                        console.log(y)
+                    if(y < maxY){
+                        y = maxY;
+                    };
+                    if(y > minY){
+                        y = minY;
+                    }
+
+                    scrolTouchCreationSng.style.top = y + 'px';
+
+                }, false);
+
+                scrolTouchCreationSng.addEventListener('touchend', function(event) {
+                    event.preventDefault();
+
+                }, false);
+            
+            
+            
+                // тачь скрол Playlist
+                 scrolToichPlaylist.addEventListener('touchstart', function(event) {
+                    event.preventDefault();
+
+                }, false);
+
+                scrolToichPlaylist.addEventListener('touchmove', function(event) {
+
+                    var y = event.touches[0].pageY,
+                        y = y - 70;
+                        maxY = 0;
+                        minY = scrolToichPlaylist.parentElement.clientHeight - 95;
+                        console.log(y)
+                    if(y < maxY){
+                        y = maxY;
+                    };
+                    if(y > minY){
+                        y = minY;
+                    }
+
+                    scrolToichPlaylist.style.top = y + 'px';
+
+                }, false);
+
+                scrolToichPlaylist.addEventListener('touchend', function(event) {
+                    event.preventDefault();
+
+                }, false);
+            
+                // регулировщик power
+                 powerBass.addEventListener('touchstart', function(event) {
+                    event.preventDefault();
+
+                }, false);
+
+                powerBass.addEventListener('touchmove', function(event) {
+
+                    var y = event.touches[0].pageY,
+                        x = event.touches[0].pageX,
+                        d = powerBass.parentElement.clientHeight,
+                       
+                        deg = 270,
+                        x = x,
+                        y = y - d;
+                        console.log(y)
+                        
+                       
+                            deg = y; 
+                        
+
+                    powerBass.style.transform =  'rotate('+deg+'deg)';
+                    //powerBass.style.left = x + 'px';
+
+                }, false);
+
+                powerBass.addEventListener('touchend', function(event) {
+                   
+
+                }, false);
+			function is_touch_device() {  
+              try {  
+                document.createEvent("TouchEvent");  
+                return true;  
+              } catch (e) {  
+                return false;  
+              }  
+            }
+            
+            
+            
+             if (is_touch_device() ) {
+            	
+            		var scrolTouchCreation = document.querySelector('#scrollCreation'),
+            		    scrolToichPlaylist = document.querySelector('#scrollPlaylist');
+	                
+
+            		
+	             
+            }  false;
+
 			$(".top-panel-text").click(function() {
   				$(".state-playlist").toggleClass("state-playlist-active");
   				$(".state-cover").toggleClass("state-cover-up");
@@ -789,7 +977,7 @@
 
 			document.addEventListener('mousemove', function (e) {
 				if (isDown === true) {
-					var y = e.clientY - (d + 33);
+					var y = e.clientY - (d + 15);
 
 					if (y < 0) {
 						y = 0;
@@ -798,6 +986,8 @@
 					if (y > maxY) {
 						y = maxY;
 					}
+
+					
 
 					$(current).css('top', y);
 				}
@@ -812,42 +1002,101 @@
 				isDown = true;
 				current = this;
 
-				maxY = this.parentElement.clientHeight ;
+				maxY = this.parentElement.clientHeight;
+				
 				d = this.parentElement.getBoundingClientRect().top;
-			})
+
+			});
+			
+
+
 
 
 			//поиск
 			var search =  document.querySelector('#search'),
-			list =  document.querySelectorAll('.pl-text-panel-top');
-			var finder = function(){
-				for(var i = 0; i < list.length; i++){
-					if(list[i].textContent.indexOf(search.value) === 0){
-						list[i].parentElement.parentElement.parentElement.classList.remove('hidden');
+			reset = document.querySelector('#reset');
+			btnAlbums = document.querySelector('#albums'),
+			btnArtists = document.querySelector('#artists'),
+			btnSongs = document.querySelector('#songs'),
+			containerAlbums = document.querySelector('.playlist_panel-top_albums'),
+			containerSongs = document.querySelector('.playlist_panel-top_songs'),
+			plList =  document.querySelectorAll('.pl-text-panel-top'),
+			albumsList = document.querySelectorAll('.playlist-item_albums-text'),
+			songsList = document.querySelectorAll('.playlist-item_songs-text');
+			
+		
+			function searchArtists(){
+				for(var i = 0; i < plList.length; i++){
+					if(plList[i].textContent.indexOf(search.value) === 0){
+						plList[i].parentElement.parentElement.parentElement.classList.remove('hidden');
 					} else {
-						list[i].parentElement.parentElement.parentElement.classList.add('hidden');
-					} 
-
-				}
+						plList[i].parentElement.parentElement.parentElement.classList.add('hidden');
+					}
 					
-			}
-
-			var finderReolad = function (){
-				for(var g = 0; g < list.length; g++){
-					list[g].parentElement.parentElement.parentElement.classList.remove('hidden');
-					search.value = '';
 				}
 			}
+			function searchAlbums(){
+				for(var z = 0; z < albumsList.length; z++){
+					if(albumsList[z].textContent.indexOf(search.value) === 0){
+						albumsList[z].parentElement.classList.remove('hidden');
+					} else {
+						albumsList[z].parentElement.classList.add('hidden');
+					}
+					
+				}
+			} 
+			function searchSongs(){
+				for(var g = 0; g < songsList.length; g++){
+					if(songsList[g].textContent.indexOf(search.value) === 0){
+						songsList[g].parentElement.parentElement.classList.remove('hidden');
+					} else {
+						songsList[g].parentElement.parentElement.classList.add('hidden');
+					}
+					
+				}
+			}
+			function resetAlbums(){
+				for(var z = 0; z < albumsList.length; z++){
+					albumsList[z].parentElement.classList.remove('hidden');
+				}
+			}
+			function resetArtists(){
+				for(var i = 0; i < plList.length; i++){
+					plList[i].parentElement.parentElement.parentElement.classList.remove('hidden');
+				}
+			}
+			function resetSongs(){
+				for(var g = 0; g < songsList.length; g++){
+					songsList[g].parentElement.parentElement.classList.remove('hidden');
+				}
+			}      
+			search.addEventListener('keypress', function(){
+				if(btnAlbums.classList.contains('panel-top-nav-link_active')){
+				searchAlbums();
+			}
+			if(btnArtists.classList.contains('panel-top-nav-link_active')){
+				searchArtists();
+			}
+			if(btnSongs.classList.contains('panel-top-nav-link_active')){
+				searchSongs();
+			}
+			});
+			reset.addEventListener('click' , function(){
+				if(btnAlbums.classList.contains('panel-top-nav-link_active')){
+					resetAlbums();
+				}
+				if(btnArtists.classList.contains('panel-top-nav-link_active')){
+					resetArtists();
+				}
+				if(btnSongs.classList.contains('panel-top-nav-link_active')){
+					resetSongs();
 
+				}
+			});
+			
 
+           
 
-
-
-			document.addEventListener('keypress', finder);
-			reset.addEventListener('click' , finderReolad)
 		</script>
-
-
-
 	</body>	
 </html>	
